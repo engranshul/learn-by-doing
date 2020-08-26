@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.toDoItem {
+    height: 40rem;
+    border: 10;
+    margin: 10;
+    font-weight: 500;
+    font-size:x-large;
+    border-bottom: 1rem solid yellow;
+    align-items: center;
+    display: block;
+}
+.para {
+    margin : 2rem;
+}
+#checkid {
+    margin: 1rem;
+}
