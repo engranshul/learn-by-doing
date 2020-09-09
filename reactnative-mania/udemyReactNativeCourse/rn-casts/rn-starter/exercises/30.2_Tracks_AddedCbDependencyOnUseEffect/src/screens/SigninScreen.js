@@ -10,13 +10,6 @@ const SigninScreen = () => {
 
   return (
     <View style={styles.container}>
-      {
-      /* navigationevents is one way that does some actions based
-      on when user land or go away from screen.
-      
-      Below clearErrorMessage function will be call whenever screen
-      is about to come in focus..     
-      */}
       <NavigationEvents onWillFocus={clearErrorMessage} />
       <AuthForm
         headerText="Sign In to Your Account"
@@ -32,7 +25,6 @@ const SigninScreen = () => {
   );
 };
 
-/* to stop displaying any header.. */
 SigninScreen.navigationOptions = {
   header: () => false,
 };
@@ -46,15 +38,3 @@ const styles = StyleSheet.create({
 });
 
 export default SigninScreen;
-
-
-/* In React Navigation 4.x, there were 4 navigation events to 
-notify focus state of the screen:
-
-willFocus: emitted when screen comes into focus
-didFocus: emitted when the transition animation for focus finishes
-willBlur: emitted when the screen goes out of focus
-didBlur: emitted when the transition animation for blur finishes
-
-https://reactnavigation.org/docs/upgrading-from-4.x/#navigation-events
- */

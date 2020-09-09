@@ -7,8 +7,8 @@ import { navigate } from "../navigationRef";
 basically based on token on local storage of phone we judge whether
 we show logged in state to User or land him on signup page
 
-If token exists : show logged in state
-else show signup screen
+if(token exists) { show logged in state }
+else { show signup screen }
 */
 const authReducer = (state, action) => {
   switch (action.type) {
@@ -38,6 +38,8 @@ const tryLocalSignin = (dispatch) => async () => {
   }
 };
 
+/* sometimes we provide payload to dispatch call and sometimes 
+we dont..depending on the requirement.. */
 const clearErrorMessage = (dispatch) => () => {
   dispatch({ type: "clear_error_message" });
 };
@@ -47,6 +49,7 @@ on whether code goes in try block or catch block.. */
 const signup = (dispatch) => async ({ email, password }) => {
   try {
     const response = await trackerApi.post("/signup", { email, password });
+    // setting token in async storage
     await AsyncStorage.setItem("token", response.data.token);
     dispatch({ type: "signin", payload: response.data.token });
 
@@ -74,6 +77,7 @@ const signin = (dispatch) => async ({ email, password }) => {
 };
 
 const signout = (dispatch) => async () => {
+  // removing token from async storage incase of signout
   await AsyncStorage.removeItem("token");
   dispatch({ type: "signout" });
   navigate("loginFlow");
