@@ -48,7 +48,7 @@ console.log("result is",callbackTester());
 
 function callmeback(result) {
 /* this way we can guarantee that this result.toString() will
-print data in <file className=""></file> */
+print data  */
   console.log("ohh finally i have got data", result.toString());
 }
 

@@ -11,3 +11,5 @@ let promise3 = new Promise(function (resolve, reject) {
 Promise.all([promise1, promise2, promise3])
   .then((values) => console.log("values are", values))
   .catch((err) => console.log(err));
+
+// output : values are [ 'hello i got resolved', 'hello i got resolved', 'life is good..' ]  
