@@ -1,4 +1,4 @@
-//accepts two parameters: resolve and reject, which are in turn \
+//accepts two parameters: resolve and reject, which are in turn 
 //functions.
 
 var keepsHisWord = true;
@@ -12,3 +12,6 @@ promise1 = new Promise(function (resolve, reject) {
  operations or blocking code, for example, file operations, API calls,
  DB calls, IO calls,
  */
+
+
+ 
