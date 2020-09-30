@@ -22,7 +22,7 @@ more bits..so can represent wide range of symbols,characters and
 emojis..
 
 Unicode can use 8,16 or 32 bits..so support for around 2Billion(so
-thats a lot of emojis symbols command character)..
+thats a lot of emojis symbols & characters)..
 
 In UTF-8, a character may occupy a minimum of 8 bits. 
 UTF-8 uses the ASCII set for the first 128 characters.
