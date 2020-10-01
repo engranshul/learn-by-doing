@@ -1,0 +1,23 @@
+Destructuring makes working with objects and arrays in JavaScript easier.
+Using the familiar object literal and array literal syntax, you can dissect
+data structures to get at the information you’re interested in. Object patterns
+allow you to extract data from objects, and array patterns let you
+extract data from arrays.
+
+Both object and array destructuring can specify default values for any
+property or item that is undefined, and both throw errors when the right side
+of an assignment evaluates to null or undefined. You can also navigate deeply
+nested data structures with object and array destructuring, descending to
+any arbitrary depth.
+
+Destructuring declarations use var, let, or const to create variables and
+must always have an initializer. Destructuring assignments are used in place
+of other assignments and allow you to destructure into object properties
+and already existing variables.
+
+Destructured parameters use the destructuring syntax to make options
+objects more transparent when used as function parameters. You can list
+all the actual data you’re interested in along with other named parameters.
+
+Destructured parameters can be array patterns, object patterns, or a mixture,
+and you can use all the features of destructuring.
