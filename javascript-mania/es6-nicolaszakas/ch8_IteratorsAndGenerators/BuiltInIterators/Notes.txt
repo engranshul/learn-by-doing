@@ -1,0 +1,32 @@
+/* 
+Iterators are an important part of ECMAScript 6, and as such, you don’t
+need to create your own iterators for many built-in types: the language
+includes them by default. You only need to create iterators when the builtin
+iterators don’t serve your purpose, which will most frequently be when
+defining your own objects or classes. Otherwise, you can rely on built-in
+iterators to do your work. Perhaps the most common iterators you’ll use
+are those that work on collections.
+*/
+
+
+
+/* 
+ECMAScript 6 has three types of collection objects: arrays, maps, and sets.
+All three have the following built-in iterators to help you navigate their
+content:
+
+entries() Returns an iterator whose values are key-value pairs
+
+values() Returns an iterator whose values are the values of the
+collection
+
+keys() Returns an iterator whose values are the keys contained in the
+collection
+
+You can retrieve an iterator for a collection by calling one of these
+methods.
+
+
+Remember only reason for of loop is able to iterate over arrays,maps
+or set coz they provide there iterator for iterating.. 
+*/

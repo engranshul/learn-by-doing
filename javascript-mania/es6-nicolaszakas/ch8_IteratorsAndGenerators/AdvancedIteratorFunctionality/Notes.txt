@@ -1,0 +1,9 @@
+/* 
+Iterators can do these things also :
+Passing Arguments to Iterators
+Throwing Errors in Iterators
+Generator Return Statements
+Delegating Generators 
+
+will learn more about them only if required in future
+*/
