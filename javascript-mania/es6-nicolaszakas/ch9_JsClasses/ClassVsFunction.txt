@@ -1,0 +1,26 @@
+• Class declarations, unlike function declarations, are not hoisted. Class
+declarations act like let declarations, so they exist in the temporal dead
+zone until execution reaches the declaration.
+
+• All code inside class declarations runs in strict mode automatically.
+There’s no way to opt out of strict mode inside classes.
+
+• All methods are nonenumerable. This is a significant change from
+custom types, where you need to use Object.defineProperty() to make a
+method nonenumerable.
+
+Objects can have properties that don't show up when iterated through the
+particular object using Object.keys() or for...in loop.Those type of 
+properties are called as non-enumerable properties
+
+To create a non-enumerable property we have to use Object.defineProperty() 
+method. This a special method to create non-enumerable properties in an 
+object. 
+
+• All methods lack an internal [[Construct]] method and will throw an
+error if you try to call them with new.
+
+• Calling the class constructor without new throws an error.
+
+• Attempting to overwrite the class name within a class method throws
+an error.

@@ -1,0 +1,28 @@
+ECMAScript 6 classes make inheritance in JavaScript easier to use, so you
+don’t need to disregard any existing understanding of inheritance you
+might have from other languages. ECMAScript 6 classes started as syntactic
+sugar for the classical inheritance model in ECMAScript 5 but added several
+features to reduce mistakes.
+
+ECMAScript 6 classes work with prototypal inheritance by defining
+nonstatic methods on the class prototype, whereas static methods end up
+on the constructor. All methods are nonenumerable, which better matches
+the behavior of built-in objects whose methods are typically nonenumerable
+by default. Additionally, class constructors can’t be called without new,
+ensuring that you can’t accidentally call a class as a function.
+
+Class-based inheritance allows you to derive a class from another class,
+function, or expression. This capability means you can call a function to
+determine the correct base to inherit from, allowing you to use mixins and
+other different composition patterns to create a new class. Inheritance works
+in such a way that inheriting from built-in objects like Array is now possible
+and works as expected.
+
+You can use new.target in class constructors to behave differently depending
+on how the class is called. The most common use is to create an abstract
+base class that throws an error when instantiated directly but still allows
+inheritance via other classes.
+
+Overall, classes are an important addition to JavaScript. They provide
+a more concise syntax and better functionality for defining custom object
+types in a safe, consistent manner.

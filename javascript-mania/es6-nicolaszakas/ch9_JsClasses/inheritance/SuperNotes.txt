@@ -1,0 +1,11 @@
+
+class Square extends Rectangle {
+// no constructor
+}
+
+// is equivalent to
+class Square extends Rectangle {
+constructor(...args) {
+super(...args);
+}
+}
