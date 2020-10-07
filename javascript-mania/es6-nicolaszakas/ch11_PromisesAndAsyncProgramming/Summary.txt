@@ -1,0 +1,27 @@
+Promises are designed to improve asynchronous programming in JavaScript
+by giving you more control and composability over asynchronous operations
+than events and callbacks can. Promises schedule jobs to be added
+to the JavaScript engine’s job queue for future execution, and a second job
+queue tracks promise fulfillment and rejection handlers to ensure proper
+execution.
+
+Promises have three states: pending, fulfilled, and rejected. A promise
+starts in a pending state and becomes fulfilled on a successful execution or
+rejected on a failure. In either case, you can add handlers to indicate when
+a promise is settled. The then() method allows you to assign a fulfillment
+and rejection handler, and the catch() method allows you to assign only a
+rejection handler.
+
+You can chain promises together in a variety of ways and pass information
+between them. Each call to then() creates and returns a new promise
+that is resolved when the previous one is resolved. Such chains can be used
+to trigger responses to a series of asynchronous events. You can also use
+Promise.race() and Promise.all() to monitor the progress of multiple promises
+and respond accordingly.
+
+Asynchronous task running is easier when you combine generators and
+promises, because promises provide a common interface that asynchronous
+operations can return. You can then use generators and the yield operator
+to wait for asynchronous responses and respond appropriately.
+Most new web APIs are being built on top of promises, and you can
+expect many more to follow suit in the future.
