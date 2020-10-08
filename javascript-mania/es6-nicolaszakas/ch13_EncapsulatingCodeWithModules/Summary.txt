@@ -41,3 +41,30 @@ executed as a module. Module files loaded with <script type="module"> are
 loaded as though the defer attribute is applied to them. Modules are also
 executed in the order in which they appear in the containing document
 after the document is fully parsed.
+
+***************************************************************************
+
+Strict Mode is turned on by default in the ES6 module system
+
+ES6 modules are files that export an API
+export default value exports a default binding
+export var foo = 'bar' exports a named binding
+Named exports are bindings that can be changed at any time from the module that's exporting them
+export { foo, bar } exports a list of named exports
+export { foo as ponyfoo } aliases the export to be referenced as ponyfoo instead
+export { foo as default } marks the named export as the default export
+As a best practice, export default api at the end of all your modules, where api is an object, avoids confusion
+Module loading is implementation-specific, allows interoperation with CommonJS
+import 'foo' loads the foo module into the current module
+import foo from 'ponyfoo' assigns the default export of ponyfoo to a local foo variable
+import {foo, bar} from 'baz' imports named exports foo and bar from the baz module
+import {foo as bar} from 'baz' imports named export foo but aliased as a bar variable
+import {default} from 'foo' also imports the default export
+import {default as bar} from 'foo' imports the default export aliased as bar
+import foo, {bar, baz} from 'foo' mixes default foo with named exports bar and baz in one declaration
+import * as foo from 'foo' imports the namespace object
+Contains all named exports in foo[name]
+Contains the default export in foo.default, if a default export was declared in the module
+
+******************************************************************************
+
